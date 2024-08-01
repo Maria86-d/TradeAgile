@@ -1,0 +1,131 @@
+{% load static%}
+* {
+    margin: 0;
+    padding: 0;
+    font-family: roboto;
+    text-align: center;
+}
+body{
+    background-color: #f1f1d4;
+}
+#caixa{
+    width: 60vw;
+    height: 70vh;
+    background-color: rgba(0, 74, 173, 0.8);
+    border-radius: 0 0 15px 15px;
+    top: 19%;
+    left: 20%;
+    position: absolute;
+}
+button{
+    height: 8vh;
+    width: 12vw;
+    border-radius: 15px;
+    border: 2px solid #FFDE59;
+    color:#FFDE59;
+    background-color: rgba(0, 74, 173, 0.8);
+    margin-top: 10px;
+}
+
+form label {
+    color:#FFDE59;
+}
+form {
+    padding: 5px;
+}
+form input,option,select {
+    border: none;
+    border-bottom: 2px solid #FFDE59;
+    background: none;
+    height: 30px;
+    width: 30%;
+}
+form *{
+    margin: 8px;
+    height: 40px;
+    font-weight: bold;
+    color:#FFDE59;
+    font-size: 18px;
+}
+
+#topo {
+    width: 60vw;
+    height:10vh ;
+    background-color:#FFDE59;
+    margin-left: 20%;
+    top: 9%;
+    position: absolute;
+    border-radius:15px 15px  0   0 ;
+}
+.button {
+  display: block;
+  position: relative;
+  width: 56px;
+  height: 56px;
+  margin: 0;
+  overflow: hidden;
+  outline: none;
+  background-color: transparent;
+  cursor: pointer;
+  border: 0;
+}
+
+.button:before,
+.button:after {
+  content: "";
+  position: absolute;
+  border-radius: 50%;
+  inset: 7px;
+}
+
+.button:before {
+  border: 4px solid #004AAD;
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button:after {
+  border: 4px solid #FFDE59;
+  transform: scale(1.3);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  opacity: 0;
+}
+
+.button:hover:before,
+.button:focus:before {
+  opacity: 0;
+  transform: scale(0.7);
+  transition: opacity 0.4s cubic-bezier(0.165, 0.84, 0.44, 1),
+    transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+.button:hover:after,
+.button:focus:after {
+  opacity: 1;
+  transform: scale(1);
+  transition: opacity 0.4s cubic-bezier(0.77, 0, 0.175, 1) 80ms,
+    transform 0.5s cubic-bezier(0.455, 0.03, 0.515, 0.955) 80ms;
+}
+
+.button-box {
+  display: flex;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.button-elem {
+  display: block;
+  width: 20px;
+  height: 20px;
+  margin: 17px 18px 0 18px;
+  transform: rotate(180deg);
+  fill: #004AAD;
+}
+
+.button:hover .button-box,
+.button:focus .button-box {
+  transition: 0.4s;
+  transform: translateX(-56px);
+}
